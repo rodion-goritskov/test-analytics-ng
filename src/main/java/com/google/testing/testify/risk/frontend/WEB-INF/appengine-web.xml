@@ -4,6 +4,7 @@
   <application>test-analytics</application>
   <precompilation-enabled>false</precompilation-enabled>
   <version>10</version>
+  <threadsafe>true</threadsafe>
   <!-- Configure java.util.logging -->
   <system-properties>
     <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
