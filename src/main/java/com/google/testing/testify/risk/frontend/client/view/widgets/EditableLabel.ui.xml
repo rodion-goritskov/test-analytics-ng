@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
+
+  <!-- Editable Label -->
+  <gwt:FocusPanel ui:field="focusPanel">
+    <gwt:DeckPanel ui:field="deckPanel">
+      <gwt:Label ui:field="label" />
+      <gwt:TextBox ui:field="textArea" />
+    </gwt:DeckPanel>
+  </gwt:FocusPanel>
+
+</ui:UiBinder>

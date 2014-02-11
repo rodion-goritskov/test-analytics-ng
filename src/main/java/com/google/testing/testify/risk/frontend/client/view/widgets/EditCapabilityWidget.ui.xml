@@ -1,0 +1,101 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <gwt:VerticalPanel>
+    <gwt:HTMLPanel>
+      <hr class="tty-ItemDivider" />
+    </gwt:HTMLPanel>
+    <gwt:HorizontalPanel addStyleNames="tty-ItemContainer">
+      <gwt:Cell width="16" height="100%">
+        <gwt:Label addStyleNames="tty-ItemGripper" ui:field="capabilityGripper" visible="false" />
+      </gwt:Cell>
+      <gwt:VerticalPanel addStyleNames="tty-ItemContent tty-NoPadding">
+        <ttywidgets:EasyDisclosurePanel ui:field="disclosurePanel">
+          <gwt:HTMLPanel>
+            <!-- Table consists of 4 columns; each row should have exactly 4 columns. -->
+              <table class="tty-EditCapabilityTable">
+                <tr>
+                  <td>
+                    <gwt:Label>Name:</gwt:Label>
+                  </td>
+                  <td colspan="3">
+                    <gwt:TextBox ui:field="capabilityName" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <gwt:FlowPanel ui:field="labelsPanel" />
+                  </td>
+                </tr>
+                <tr>
+                 <td colspan="4">
+                   <gwt:TextArea ui:field="description" />
+                 </td>
+               </tr>
+               <tr>
+                 <td colspan="4">
+                    <gwt:Label>Frequency of Failure:</gwt:Label>
+                 </td>
+               </tr>
+               <tr>
+                 <td colspan="4">
+                   <gwt:HorizontalPanel ui:field="failurePanel" addStyleNames="tty-EditCapabilitySelectPanel" />
+                 </td>
+               </tr>
+               <tr>
+                 <td colspan="4">
+                   <gwt:Label>Impact:</gwt:Label>
+                 </td>
+               </tr>
+               <tr>
+                 <td colspan="4">
+                   <gwt:HorizontalPanel ui:field="impactPanel" addStyleNames="tty-EditCapabilitySelectPanel" />
+                 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <gwt:Label>Attribute:</gwt:Label>
+                  </td>
+                  <td>
+                    <gwt:ListBox ui:field="attributeBox" />
+                  </td>
+                  <td>
+                    <gwt:Label>Component:</gwt:Label>
+                  </td>
+                  <td>
+                    <gwt:ListBox ui:field="componentBox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" align="right">
+                    <gwt:HorizontalPanel addStyleNames="tty-EditCapabilityButtonPanel" ui:field="savedPanel" visible="false">
+                      <gwt:Label>Changes saved</gwt:Label>
+                      <gwt:Image ui:url="/images/bugstate-closed.png" />
+                    </gwt:HorizontalPanel>
+                  </td>
+                  <td align="right">
+                    <!-- Save button area is invisible unless the user has edit access. -->
+                    <gwt:HorizontalPanel addStyleNames="tty-EditCapabilityButtonPanel" ui:field="buttonPanel" visible="false">
+                      <gwt:Button ui:field="cancelButton">Cancel</gwt:Button>
+                      <gwt:Button ui:field="saveButton">Save</gwt:Button>
+                    </gwt:HorizontalPanel>
+                  </td>
+                </tr>
+              </table>
+            </gwt:HTMLPanel>
+          </ttywidgets:EasyDisclosurePanel>
+      </gwt:VerticalPanel>
+      <gwt:Cell width="20">
+        <gwt:Image ui:field="deleteImage" addStyleNames="tty-ItemDeleteImage"
+          visible="false" ui:url="images/x.png" />
+      </gwt:Cell>
+      <gwt:Cell width="0">
+        <gwt:Label ui:field="capabilityId" visible="false" />
+      </gwt:Cell>
+    </gwt:HorizontalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

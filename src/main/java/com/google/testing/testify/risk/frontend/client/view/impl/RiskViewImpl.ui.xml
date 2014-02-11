@@ -1,0 +1,31 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Risk -->
+  <gwt:VerticalPanel ui:styleName="tty-Page tty-GenericRiskPage">
+    <ttywidgets:PageSectionVerticalPanel headerText="Risk" ui:field="pageSectionPanel">
+    
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel ui:field="introTextLabel">Description text for the risk page.</gwt:InlineLabel>
+        <gwt:Anchor ui:styleName="tty-InlineAnchor" target="_blank" href="http://code.google.com/p/test-analytics/wiki/InAppDocumentation#Risk">Learn more</gwt:Anchor>
+      </gwt:FlowPanel>
+  
+      <!-- Risk Views Panel -->
+      <gwt:SimplePanel ui:styleName="tty-RiskPageItem">
+        <gwt:VerticalPanel ui:field="content" />
+      </gwt:SimplePanel>
+  
+      <!-- Risk Grid Panel -->
+      <gwt:SimplePanel ui:styleName="tty-RiskPageItem">
+        <ttywidgets:EasyDisclosurePanel>
+          <gwt:Grid ui:field="baseGrid" ui:styleName="tty-ComponentAttributeGrid tty-RiskGrid" />
+        </ttywidgets:EasyDisclosurePanel>
+      </gwt:SimplePanel>
+      
+      <gwt:SimplePanel ui:field="bottomContent" ui:styleName="tty-RiskPageItem" />
+
+    </ttywidgets:PageSectionVerticalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

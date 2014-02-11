@@ -1,0 +1,71 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Test Analytics Application -->
+  <gwt:DockLayoutPanel unit='EM'>
+    
+    <!-- Header -->
+    <gwt:north size='3.4'>
+      <ttywidgets:PageHeaderWidget />
+    </gwt:north>
+
+    <!-- Toolbar -->
+    <gwt:north size='2.3'>
+      <gwt:HorizontalPanel ui:styleName="tty-Toolbar">
+          <gwt:HorizontalPanel ui:styleName="tty-ToolbarItem">
+            <gwt:ListBox ui:field="userProjectsListBox" ui:styleName="tty-ToolbarProjectsList"></gwt:ListBox>
+          </gwt:HorizontalPanel>
+       </gwt:HorizontalPanel>
+    </gwt:north>
+
+    <!-- Footer -->
+    <gwt:south size='3'>
+       <gwt:VerticalPanel ui:styleName="tty-Footer">
+         <gwt:Label ui:styleName="tty-FooterText">Source code licensed under the Apache License, Version 2.0</gwt:Label>
+       </gwt:VerticalPanel>
+    </gwt:south>
+    
+    <!-- Admin Panel -->
+    <gwt:south size='8'>
+       <gwt:VerticalPanel ui:field="adminPanel" visible="false">
+          <gwt:Label>Admin commands:</gwt:Label>
+          <gwt:HorizontalPanel>
+            <gwt:Button ui:field="createTestProjectButton">Create Test Project</gwt:Button>
+            <gwt:Button ui:field="createDataSourcesButton">Create Standard Data Sources</gwt:Button>
+          </gwt:HorizontalPanel>
+       </gwt:VerticalPanel>
+    </gwt:south>
+
+    <!-- Display Projects -->
+    <gwt:center>
+      <gwt:VerticalPanel ui:styleName="tty-HomePageContent">
+        <gwt:VerticalPanel ui:styleName="tty-HomePageOptions">
+          <gwt:DeckPanel ui:field="newProjectPanel" ui:styleName="tty-HomePageNewProject">
+            <gwt:HorizontalPanel>
+              <gwt:Cell verticalAlignment="ALIGN_BOTTOM">
+                <gwt:Button ui:field="createProjectButton">New Project</gwt:Button>
+              </gwt:Cell>
+              <gwt:Cell verticalAlignment="ALIGN_BOTTOM">
+                <gwt:CheckBox ui:styleName="tty-HomePageProjectsFilter" ui:field="justMyProjectsCheckbox">Show only my projects</gwt:CheckBox>
+              </gwt:Cell>
+            </gwt:HorizontalPanel>
+            <gwt:FlowPanel>
+              <gwt:HorizontalPanel ui:styleName="tty-HomePageNewProjectName">
+                <gwt:Label>New project name:</gwt:Label>
+                <gwt:TextBox ui:field="newProjectName" />
+                <gwt:Button ui:field="newProjectOkButton">OK</gwt:Button>
+                <gwt:Button ui:field="newProjectCancelButton">Cancel</gwt:Button>
+              </gwt:HorizontalPanel>
+            </gwt:FlowPanel>
+          </gwt:DeckPanel>
+          <gwt:Label ui:styleName="tty-HomePageOptionsBottom" />
+        </gwt:VerticalPanel>
+        <gwt:Cell height="100%">
+          <gwt:Grid ui:field="projectsGrid" ui:styleName="tty-HomePageProjectsGrid"/>
+        </gwt:Cell>
+      </gwt:VerticalPanel>
+    </gwt:center>
+  
+  </gwt:DockLayoutPanel>
+</ui:UiBinder>

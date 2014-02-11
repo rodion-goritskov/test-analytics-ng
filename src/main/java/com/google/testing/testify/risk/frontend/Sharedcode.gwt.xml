@@ -1,0 +1,7 @@
+<module>
+ <source path="shared/rpc"/>
+ <source path="shared/util"/>
+ <source path="model"/>
+ <inherits name="com.google.common.base.Base"/>
+ <inherits name="com.google.common.collect.Collect"/>
+</module>

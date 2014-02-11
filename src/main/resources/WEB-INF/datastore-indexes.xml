@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="false">
+
+  <!-- For each data type, an index that allows us to filter by project ID and data item ID. -->
+  <datastore-index kind="Checkin" ancestor="false" source="manual">
+    <property name="parentProjectId" direction="asc"/>
+    <property name="externalId" direction="asc"/>
+  </datastore-index>
+
+  <datastore-index kind="Bug" ancestor="false" source="manual">
+    <property name="parentProjectId" direction="asc"/>
+    <property name="externalId" direction="asc"/>
+  </datastore-index>
+
+  <datastore-index kind="TestCase" ancestor="false" source="manual">
+    <property name="parentProjectId" direction="asc"/>
+    <property name="externalId" direction="asc"/>
+  </datastore-index>
+
+  <!-- For each ACC item type, an index that allows sorting by the displayOrder value. -->
+  <datastore-index kind="Component" ancestor="false" source="manual">
+    <property name="parentProjectId" direction="asc"/>
+    <property name="displayOrder" direction="asc"/>
+  </datastore-index>
+
+  <datastore-index kind="Capability" ancestor="false" source="manual">
+    <property name="parentProjectId" direction="asc"/>
+    <property name="displayOrder" direction="asc"/>
+  </datastore-index>
+
+  <datastore-index kind="Attribute" ancestor="false" source="manual">
+    <property name="parentProjectId" direction="asc"/>
+    <property name="displayOrder" direction="asc"/>
+  </datastore-index>
+
+  <!-- Indexes to support ordered collections stored inside of classes. -->
+  <datastore-index kind="FilterOption" ancestor="true" source="manual">
+    <property name="filterOptions_INTEGER_IDX" direction="asc"/>
+  </datastore-index>
+
+  <datastore-index kind="AccLabel" ancestor="true" source="manual">
+    <property name="accLabels_INTEGER_IDX" direction="asc"/>
+  </datastore-index>
+
+  <datastore-index kind="DataRequestOption" ancestor="true" source="manual">
+    <property name="dataRequestOptions_INTEGER_IDX" direction="asc"/>
+  </datastore-index>
+
+</datastore-indexes>

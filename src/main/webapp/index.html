@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Test Analytics</title>
+
+    <script type="text/javascript" language="javascript" src="com.google.testing.testify.risk.frontend.clientmodule.nocache.js"></script>
+    <link rel="stylesheet" type="text/css" href="test-analytics.css" />
+  </head>
+
+  <body>
+    <!-- No script check -->
+    <noscript>
+      <div class="tty-NoJavaScriptError">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+    <!-- Enable GWT to use browser history -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+
+  <script type="text/javascript">
+    // Install Google Feedback
+    (function() { // Protect global namespace
+      var prefix = ('https:' == document.location.protocol) ? 'https://ssl' : 'http://www';
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = prefix + '.gstatic.com/feedback/api.js';
+      document.body.appendChild(script);
+    })();
+  </script>
+  </body>
+</html>

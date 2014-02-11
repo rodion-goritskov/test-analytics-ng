@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queue-entries>
+  <queue>
+    <name>migration</name>
+    <rate>20/s</rate>
+  </queue>
+  <queue>
+    <name>dataupload</name>
+    <rate>10/s</rate>
+  </queue>
+</queue-entries>

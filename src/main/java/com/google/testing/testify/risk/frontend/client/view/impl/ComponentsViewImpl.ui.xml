@@ -1,0 +1,24 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Components -->
+  <gwt:VerticalPanel ui:styleName="tty-Page tty-ComponentsPage">
+    <ttywidgets:PageSectionVerticalPanel headerText="Components">
+
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel>Components are the 'moving parts' of your application. Typically components are core libraries, data sources, parts of the code base, and so on.</gwt:InlineLabel>
+        <gwt:Anchor ui:styleName="tty-InlineAnchor" target="_blank" href="http://code.google.com/p/test-analytics/wiki/InAppDocumentation#Components">Learn more</gwt:Anchor>
+      </gwt:FlowPanel>
+
+      <gwt:HorizontalPanel ui:styleName="tty-ItemContainer" ui:field="addNewComponentPanel" visible="false">
+        <gwt:TextBox ui:field="newComponentName" />
+        <gwt:Button ui:field="addNewComponentButton">Add</gwt:Button>
+      </gwt:HorizontalPanel>
+
+      <ttywidgets:SortableVerticalPanel ui:field="componentsPanel" />
+
+    </ttywidgets:PageSectionVerticalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

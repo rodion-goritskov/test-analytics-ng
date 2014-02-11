@@ -1,0 +1,35 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <gwt:VerticalPanel ui:styleName="tty-Page tty-ConfigureFiltersPage">
+    <ttywidgets:PageSectionVerticalPanel headerText="Add Filter">
+
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel>Filters will automatically assign your imported data to Attributes, Components, or Capabilities as it is imported.</gwt:InlineLabel>
+        <gwt:Anchor ui:styleName="tty-InlineAnchor" target="_blank" href="http://code.google.com/p/test-analytics/wiki/InAppDocumentation#Filters">Learn more</gwt:Anchor>
+      </gwt:FlowPanel>
+
+      <!-- Add a new data source -->
+      <gwt:VerticalPanel>
+        <gwt:Label>Filter</gwt:Label>
+        <gwt:HorizontalPanel verticalAlignment="middle">
+          <gwt:ListBox ui:field="filterTypeBox" />
+          <gwt:Button ui:field="addFilterButton">Add filter</gwt:Button>
+        </gwt:HorizontalPanel>
+      </gwt:VerticalPanel>
+
+    </ttywidgets:PageSectionVerticalPanel>
+
+    <ttywidgets:PageSectionVerticalPanel headerText="Existing Filters">
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel>These filters are configured to automatically assign imported data to your ACC model.</gwt:InlineLabel>
+        <gwt:Anchor ui:styleName="tty-InlineAnchor" target="_blank" href="http://code.google.com/p/test-analytics/wiki/InAppDocumentation#Filters">Learn more</gwt:Anchor>
+      </gwt:FlowPanel>
+
+      <gwt:VerticalPanel ui:field="filtersPanel" />
+    </ttywidgets:PageSectionVerticalPanel>
+
+  </gwt:VerticalPanel>
+</ui:UiBinder>

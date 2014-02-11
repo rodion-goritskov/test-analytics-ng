@@ -1,0 +1,31 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <gwt:VerticalPanel ui:styleName="tty-Page tty-CapabilityDetailsPage">
+    <ttywidgets:PageSectionVerticalPanel ui:field="detailsSection">
+    </ttywidgets:PageSectionVerticalPanel>
+    <ttywidgets:PageSectionVerticalPanel headerText="Signoff">
+      <gwt:CheckBox ui:field="signoffBox" enabled="false" addStyleNames="tty-ItemSignoffCheckbox">The associated tests are sufficient to verify this capability</gwt:CheckBox>
+    </ttywidgets:PageSectionVerticalPanel>
+    <ttywidgets:PageSectionVerticalPanel headerText="Test Details" addStyleNames="tty-DetailsContent">
+      <gwt:Image ui:field="testChart" />
+      <gwt:HorizontalPanel>
+        <gwt:Image ui:url="/images/teststate-notrun.png" />
+        <gwt:HTML ui:field="testNotRunCount" />
+        <gwt:Image ui:url="/images/teststate-passed.png" />
+        <gwt:HTML ui:field="testPassedCount" />
+        <gwt:Image ui:url="/images/teststate-failed.png" />
+        <gwt:HTML ui:field="testFailedCount" />
+      </gwt:HorizontalPanel>
+      <gwt:Grid ui:field="testGrid" />
+    </ttywidgets:PageSectionVerticalPanel>
+    <ttywidgets:PageSectionVerticalPanel headerText="Bug Details" addStyleNames="tty-DetailsContent">
+      <gwt:Grid ui:field="bugGrid" />
+    </ttywidgets:PageSectionVerticalPanel>
+    <ttywidgets:PageSectionVerticalPanel headerText="Recent Code Changes" addStyleNames="tty-DetailsContent">
+      <gwt:Grid ui:field="changeGrid" />
+    </ttywidgets:PageSectionVerticalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

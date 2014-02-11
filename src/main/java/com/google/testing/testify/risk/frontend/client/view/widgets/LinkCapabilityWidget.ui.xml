@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Capability -->
+  <gwt:VerticalPanel>
+    <gwt:HTMLPanel>
+      <hr class="tty-ItemDivider" />
+    </gwt:HTMLPanel>
+  
+    <gwt:HorizontalPanel ui:styleName="tty-ItemContainer">
+      <gwt:VerticalPanel ui:styleName="tty-ItemContent">
+        <gwt:Label ui:field="capabilityLabel" ui:styleName="tty-ItemName tty-DetailsLink" />
+      </gwt:VerticalPanel>
+      <gwt:Cell width="0">
+        <gwt:Label ui:field="capabilityId" visible="false" />
+      </gwt:Cell>
+    </gwt:HorizontalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

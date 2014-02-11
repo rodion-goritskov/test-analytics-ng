@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
+
+  <!-- General Error Page -->
+  <gwt:VerticalPanel ui:styleName="tty-ErrorPage">
+
+    <gwt:HorizontalPanel>
+      <gwt:HTML>
+        <div align="left">
+          <a href="/">
+            <img src="/images/logo.png" border="0"></img>
+          </a>
+        </div>
+      </gwt:HTML>
+      <gwt:Label ui:field="errorType" ui:styleName="tty-ErrorPageErrorType"></gwt:Label>
+    </gwt:HorizontalPanel>
+    <gwt:Label ui:field="errorText" ui:styleName="tty-ErrorPageErrorText"></gwt:Label>  
+
+  </gwt:VerticalPanel>
+</ui:UiBinder>

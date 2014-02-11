@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
+    <!-- Login bar -->
+    <gwt:VerticalPanel ui:styleName="tty-Header">
+      <gwt:HorizontalPanel ui:styleName="tty-UserBar">
+        <gwt:Cell verticalAlignment='ALIGN_MIDDLE'>
+          <gwt:HTML ui:styleName="tty-Logo">
+            <div align="left">
+              <a href="/">
+                <img src="/images/logo.png" width="144" height="26" border="0" />
+              </a>
+            </div>
+          </gwt:HTML>
+        </gwt:Cell>        
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM' >
+          <gwt:Label ui:field="userEmailAddress" ui:styleName="tty-UserBarTextEmail" />
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Label ui:field="userEmailAddressDivider" ui:styleName="tty-UserBarDivider" visible="false">|</gwt:Label>
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Anchor ui:field="feedbackLink" ui:styleName="tty-UserBarItem">Send Feedback</gwt:Anchor>
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Label ui:styleName="tty-UserBarDivider">|</gwt:Label>
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Anchor ui:styleName="tty-UserBarItem" href="https://groups.google.com/group/test-analytics-discuss" target="_blank">Discussion Group</gwt:Anchor>
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Label ui:styleName="tty-UserBarDivider">|</gwt:Label>
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Anchor ui:styleName="tty-UserBarItem" href="http://code.google.com/p/test-analytics" target="_blank">Open Source Page</gwt:Anchor>
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Label ui:styleName="tty-UserBarDivider">|</gwt:Label>
+        </gwt:Cell>
+        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
+          <gwt:Anchor ui:field="signInOrOutLink" ui:styleName="tty-UserBarItem">Sign in</gwt:Anchor>
+        </gwt:Cell>
+      </gwt:HorizontalPanel>
+    </gwt:VerticalPanel>
+</ui:UiBinder>

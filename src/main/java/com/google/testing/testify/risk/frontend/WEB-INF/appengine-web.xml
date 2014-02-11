@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Changes to this file should also be reflected in ../WEB-INF-dev/appengine-web.xml -->
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+  <application>test-analytics</application>
+  <precompilation-enabled>false</precompilation-enabled>
+  <version>10</version>
+  <!-- Configure java.util.logging -->
+  <system-properties>
+    <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+    <property name="com.google.testing.testify.risk.frontend.url" value="https://test-analytics.appspot.com" />
+    <property name="com.google.testing.testify.risk.frontend.localdomain" value="@google.com" />
+    <property name="com.google.testing.testify.risk.frontend.whitelisting" value="false" />
+  </system-properties>
+</appengine-web-app>

@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:gwt='urn:import:com.google.gwt.user.client.ui'>
+
+  <!-- NavSectionPanel -->
+  <gwt:VerticalPanel ui:styleName="tty-NavSectionPanel">
+    <!-- Header -->
+    <gwt:HorizontalPanel ui:styleName="tty-NavSectionPanelHeader">
+      <gwt:Label ui:field="sectionTitle" ui:styleName="tty-NavSectionPanelHeaderText" />
+    </gwt:HorizontalPanel>
+    <!-- Content -->
+    <gwt:VerticalPanel ui:field="content" ui:styleName="tty-NavSectionPanelContent" />
+  </gwt:VerticalPanel>
+
+</ui:UiBinder>

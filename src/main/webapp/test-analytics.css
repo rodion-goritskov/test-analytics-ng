@@ -1,0 +1,767 @@
+/**
+ * Copyright 2010 Google Inc. All Rights Reseved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+ *
+ * @author chrsmith@google.com (Chris Smith)
+ * @author jimr@google.com (Jim Reardon)
+ */
+
+* {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Test Analytics header.
+ */
+
+.tty-Header {
+  width: 100%; 
+  height: 35px;
+  margin: 5px 10px 10px 0;
+  vertical-align: bottom;
+  position: relative;
+}
+
+/**
+ * User Bar on top.
+ */
+
+.tty-UserBar {
+  float: right;
+  height: 100%;
+}
+
+.tty-UserBarDivider {
+  margin: 0 3px;
+  cursor: default;
+  padding-bottom: 4px;
+}
+
+.tty-UserBarItem {
+  margin: 0 3px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding-bottom: 4px;
+  display: block;
+}
+
+.tty-UserBarTextEmail {
+  font-weight: bold;
+  cursor: default;
+  padding-bottom: 4px;
+}
+
+.tty-UserBarBottom {
+  border-top: 1px solid #c9d7f1;
+  position: absolute;
+  width: 100%
+}
+
+.tty-Logo {
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+/**
+ * Toolbar on top of the Test Analytics Application.
+ */
+ 
+.tty-Toolbar {
+  background: #bcf;
+  height: 32px;
+  width: 100%;
+}
+
+.tty-ToolbarItem {
+  margin: 3px 5px;
+}
+
+.tty-ToolbarProjectsList {
+  width: 9em;
+}
+
+.tty-ToolbarProjectStar {
+  margin-left: 0.7em;
+}
+
+.tty-ToolbarProjectName {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+/**
+ * Left navigation bar.
+ */
+.tty-LeftNav {
+  border-right: 6px solid #bcf;
+  display: block;
+}
+
+.tty-LeftNav * {
+  width: 100%;
+}
+
+.tty-LeftNavItem,
+.tty-LeftNavItemSelected,
+.tty-LeftNavItemDisabled {
+  height: 20px;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
+.tty-LeftNavItem {
+  cursor: pointer;
+}
+
+.tty-LeftNavItem:hover {
+  background: #e3e9ff;
+}
+
+.tty-LeftNavItem a,
+.tty-LeftNavItemSelected a {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.tty-LeftNavItem:hover a {
+  text-decoration: underline;
+}
+
+.tty-LeftNavItemSelected { 
+  background: #bcf;
+  cursor: default;
+}
+
+.tty-LeftNavItemSelected a {
+  cursor: default;
+}
+
+.tty-LeftNavItemDisabled {
+  color: #666;
+  cursor: default;
+}
+
+.tty-LeftNavItemDisabled div div {
+  color: #666;
+  cursor: default;
+  padding-top: 1px;
+}
+
+/**
+ * Navigation Section Panels.
+ */
+
+.tty-NavSectionPanel {
+  border-top: 1px solid #ddd;
+  height: 1px;
+  width: 100%;
+}
+
+.tty-NavSectionPanelHeader {
+  padding-left: 4px;
+}
+
+.tty-NavSectionPanelHeaderText {
+  display: inline;
+  font-weight: bold;
+}
+
+/**
+ * Styles for general page flow.
+ */
+
+.tty-Page, .tty-CapabilitiesPage {
+  width: 95%;
+}
+
+.tty-PageIntroText {
+  margin-bottom: 0.6em;
+}
+
+.tty-InlineAnchor {
+  color: #78c;
+  display: inline;
+  padding-left: 0.6em;
+}
+
+.tty-PageSectionVerticalPanel {
+  margin: 1.0em 1.0em;
+  width: 100%;
+}
+ 
+.tty-PageSectionVerticalPanelHeader {
+  background: #e3e9ff;
+  display: block;
+  font-size: 1.3em;
+  font-weight: bolder;
+  margin-bottom: 0.5em;
+  padding: 0.2em 0.4em;
+}
+
+.tty-PageSectionVerticalPanelItem {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 2px 0;
+}
+
+/**
+ * Test Analytics footer.
+ */ 
+
+.tty-Footer {
+  border-top: 1px solid #bcf;
+  padding-top: 0.7em;
+  width: 100%;
+}
+
+.tty-FooterText {
+  text-align: center;
+}
+
+/**
+ * General widgets created for Test Analytics.
+ */
+.tty-RemovableLabel {
+  background: #F0F0F0;
+  border-radius: 0.6em;
+  border: 1px solid #aaa;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1px 5px 1px 0;
+}
+
+.tty-RemovableLabel div {
+  padding: 2px 2px;
+}
+
+.tty-RemovableLabel .gwt-Label,
+.tty-RemovableLabel .gwt-TextBox {
+  font-size: small;
+}
+
+.tty-RemovableLabelDeleteImage {
+  float: right;
+  margin: 1px 5px 1px 1px;
+}
+
+.tty-RemovableLabelAddImage {
+  float: right;
+  height: 12px;
+  margin: 1px 1px 1px 3px;
+  width: 12px;
+}
+
+.tty-SuggestBoxPopup {
+    background-color: lightgray;
+    border: 2px gray solid;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 10px;
+}
+
+.tty-SuggestBoxPopup .item {
+    padding-left: 2px;
+    padding-right: 6px;
+    cursor: default;
+}
+
+.tty-SuggestBoxPopup .item-selected {
+    background-color: #EEE;
+}
+
+.gwt-DisclosurePanel .content {
+  border-left: 0;
+}
+.tty-DisclosurePanel {
+  width: 100%;
+}
+
+/** Necessary for Firefox to not show a border around the + box **/
+.tty-DisclosurePanel img {
+  border: none;
+}
+
+.tty-DisclosurePanelHeader {
+  width: 100%;
+}
+
+.tty-DisclosurePanelHeader td {
+  padding-right: 5px;
+}
+
+.tty-DisclosureHeader {
+  font-color: #FFF;
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+.tty-StandardDialogBox {
+  height: 400px;
+  width: 600px;
+}
+
+.tty-DataGrid > tbody > tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.tty-DataGrid > tbody > tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.tty-DataGridHeaderCell {
+  background-color: #ccc;
+  font-weight: bold;
+  padding: 4px 12px;
+}
+
+.tty-DataGridCell {
+  font-size: small;
+  padding: 3px 5px;
+}
+
+.tty-DataGridCell div {
+  font-size: smaller;
+  padding: 0 10px;
+}
+
+.tty-DataGridImageCell {
+  margin: auto;
+  display: block;
+}
+
+.tty-DataGrid > tbody > tr > td:nth-of-type(1) {
+  width: 100%;
+}
+
+/**
+ * Project Details page.
+ */ 
+
+.tty-ProjectDetailsPage .gwt-Label {
+  font-weight: bold;
+}
+
+.tty-ProjectDetailsPage .gwt-TextBox,
+.tty-ProjectDetailsPage .gwt-TextArea {
+  width: 600px;
+}
+
+.tty-DetailsInputItem {
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.tty-DetailsCheckbox label {
+  padding-left: 5px;
+}
+
+/**
+ * Different color intensities to visualize risk. 
+ */
+
+/* Positive values: transition from white to green. */
+.tty-RiskIntensity_-100 { background: #008B00; }
+.tty-RiskIntensity_-90  { background: #00CD00; }
+.tty-RiskIntensity_-80  { background: #00EE00; }
+.tty-RiskIntensity_-70  { background: #4DFF4D; }
+.tty-RiskIntensity_-60  { background: #33FF33; }
+.tty-RiskIntensity_-50  { background: #6FFF6F; }
+.tty-RiskIntensity_-40  { background: #66FF66; }
+.tty-RiskIntensity_-30  { background: #9Aff9A; }
+.tty-RiskIntensity_-20  { background: #DDFFDD; }
+.tty-RiskIntensity_-10  { background: #F0FFF0; }
+
+/* Positive values: transition from orange to red. */  
+.tty-RiskIntensity_0    { background: #FFFFFF; }
+.tty-RiskIntensity_10   { background: #FFFFDD; }
+.tty-RiskIntensity_20   { background: #FFFFCC; }
+.tty-RiskIntensity_30   { background: #FFFFAA; }
+.tty-RiskIntensity_40   { background: #FFEE00; }
+.tty-RiskIntensity_50   { background: #FFCC00; }
+.tty-RiskIntensity_60   { background: #FFAA00; }
+.tty-RiskIntensity_70   { background: #FF8800; }
+.tty-RiskIntensity_80   { background: #FF6666; }
+.tty-RiskIntensity_90   { background: #FF3300; }
+.tty-RiskIntensity_100  { background: #FF2200; }
+
+/**
+ * HomePage Styling
+ */
+
+.tty-HomePageOptions {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+}
+
+.tty-HomePageOptions table {
+  padding-bottom: 5px;
+}
+
+.tty-HomePageOptionsBottom {
+  border-top: 1px solid #c9d7f1;
+  font-size: 1px;
+  width: 100%
+}
+
+.tty-HomePageLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 0 10px 0;
+}
+
+.tty-HomePageContent {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tty-HomePageTagline {
+  font-size: 150%;
+  margin-bottom: 1.5em;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.tty-HomePageProjectsFilter {
+  display: block;
+  text-align: right;
+  margin-top: 1.0em;
+}
+
+.tty-HomePageProjectsFilter label {
+  padding-left: 0.5em;
+}
+
+.tty-HomePageProjectsGrid {
+  font-size: 150%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+/* Size the cells housing project widgets. */
+.tty-HomePageProjectsGrid > tbody > tr > td {
+  width: 32%;
+}
+
+/* Size the controls of the project widgets inside the table. */
+.tty-HomePageProjectsGrid > tbody > tr > td > td:nth-of-type(1) {
+  width: 20px;
+}
+
+.tty-HomePageProjectsGrid > tbody > tr > td > td:nth-of-type(2) {
+  width: 100%;
+}
+
+.tty-HomePageNewProject {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  padding-top: 10px;
+}
+
+.tty-HomePageNewProjectName,
+.tty-HomePageNewProjectName tbody {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC;
+  padding: 15px 10px;
+  border-radius: 1em;
+}
+
+.tty-HomePageNewProjectName td:nth-of-type(2) {
+  padding: 0 15px;
+}
+
+/**
+ * Common styling for Attributes, Components, Capabilties.
+ */
+ .tty-ItemDivider {
+   width: 80%;
+   color: #ebebeb;
+   height: 1px;
+   margin: 15px auto;
+   text-align: middle;
+   border: 0;
+   border-top: 2px solid #dbdbdb;
+}
+ 
+.tty-ItemContainer {
+  border: 0;
+  margin: 4px 5px; 
+  padding: 3px 3px;
+  width: 550px;
+  height: 100%
+}
+
+.tty-ItemContainer > tbody > tr > td > .gwt-TextBox {
+  height: 20px;
+  width: 480px;
+}
+
+.tty-ItemContainer .gwt-Button {
+  height: 27px;
+  width: 60px;
+}
+
+.tty-ItemContent {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.tty-NoPadding {
+  padding-left: 0px;
+}
+
+.tty-ItemContent a {
+  cursor: pointer;
+}
+
+.tty-ItemContent .gwt-TextArea {
+  height: 3.0em;
+  width: 95%;
+}
+
+.tty-ItemContent > tbody > tr > td,
+.tty-EditCapabilityTable > tbody > tr > td {
+  padding: 3px 0;
+}
+
+.tty-ItemNameContainer {
+  width: 95%;
+}
+
+.tty-ItemName,
+.tty-ItemName input,
+.tty-DisclosurePanelHeader tbody tr td div {
+  color: #353535;
+  font-size: large;
+  font-weight: bold;
+  style: inline-block;
+ }
+
+.tty-DetailsLink {
+  cursor: pointer;
+  color: #00A;
+  text-decoration: underline;
+}
+
+.tty-DetailsContent td {
+  padding: 3px;
+}
+.tty-ItemSignoffCheckbox input,
+.tty-ItemSignoffCheckbox label {
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.tty-ItemContainer:hover .tty-ItemGripper {
+  visibility: visible;
+}
+
+.tty-ItemGripper {
+  background-image:url('images/grippy.png');
+  height: 100%;
+  width: 12px;
+  background-repeat: repeat-y;
+  background-position: center;
+  visibility: hidden;
+}
+
+.tty-ItemDeleteImage {
+  display: inline;
+  cursor: pointer;
+  margin-top: 9px;
+}
+
+/**
+ * Styling for capabilities related items.
+ */
+.tty-CapabilityRiskHeader {
+  width: 100%;
+}
+
+.tty-CapabilityRiskValueHeader {
+  font-weight: bold;
+  text-align: right;
+  width: 100%;
+}
+
+.tty-EditCapabilityTable {
+  width: 100%;
+}
+
+.tty-EditCapabilityTable .gwt-TextBox {
+  padding-right: 10px;
+  width: 95%;
+}
+
+.tty-EditCapabilitySelectPanel {
+  padding: 4px 0 6px 10px;
+  width: 100%;
+}
+
+.tty-EditCapabilitySelectPanel td:nth-of-type(1) {
+  width: 10%;
+}
+
+.tty-EditCapabilitySelectPanel td:nth-of-type(2),
+.tty-EditCapabilitySelectPanel td:nth-of-type(3),
+.tty-EditCapabilitySelectPanel td:nth-of-type(5) {
+  width: 20%;
+}
+
+.tty-EditCapabilitySelectPanel td:nth-of-type(4) {
+  width: 30%;
+}
+
+.tty-EditCapabilitySelectPanel label {
+  padding-left: 3px;
+}
+
+.tty-EditCapabilityButtonPanel {
+  align: right;
+  padding-top: 5px;
+}
+
+.tty-RiskSourcesPanel {
+  padding-bottom: 10px;
+}
+
+.tty-RiskSourcesPanel .gwt-CheckBox label {
+  padding: 0 25px 0 5px;
+}
+
+.tty-CapabilitiesPageItem, .tty-RiskPageItem {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/**
+ * DataRequest and Filter Parameter Styling
+ */
+.tty-DataRequestParameter, .tty-FilterParameter {
+  margin: 5px 5px;
+  width: 98%;
+}
+
+.tty-FilterParameterAnyAll .gwt-ListBox {
+  margin: 0 5px;
+  padding: 0 3px;
+}
+
+.tty-DataRequestParameter .gwt-TextBox,
+.tty-FilterParameter .gwt-TextBox,
+.tty-FilterParameter .gwt-ListBox {
+  width: 98%;
+}
+
+.tty-DataRequestParameter td, .tty-FilterParameter td {
+  padding-right: 10px;
+}
+
+.tty-DataRequestParameter td:nth-of-type(2), .tty-FilterParameter td:nth-of-type(2) {
+  width: 100%;
+}
+
+/**
+ * Grid Styles
+ */
+
+.tty-ComponentAttributeGrid {
+  border: 0 none;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tty-GridXHeaderCell {
+  border: none;
+  padding: 10px 5px 10px 30px;
+  background: #FFF;
+}
+
+.tty-GridXHeaderCell div {
+  font-weight: bolder;
+  text-align: right;
+}
+
+.tty-GridYHeaderCell {
+  border: none;
+  padding: 5px 15px 0 15px;
+  background: #FFF;
+}
+
+.tty-GridYHeaderCell div {
+  font-weight: bolder;
+}
+
+.tty-GridCell {
+  font-size: large;
+  border: 1px solid #B3B3B3;
+  padding: 0;
+}
+
+.tty-GridCell div, .tty-GridCell td {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  color: blue;
+  cursor: pointer;
+}
+
+.tty-GridCellHighlighted, .tty-GridCellSelected {
+  background: #CCC;
+}
+
+.tty-GridColumnHighlighted {
+  background: #EEE;
+}
+
+.tty-GridRowHighlighted {
+  background: #EEE;
+}
+
+
+.tty-RiskCellSelected {
+  border-color: #777;
+  border-width: 2px;
+}
+
+/**
+ * General error page.
+ */
+
+.tty-ErrorPage {
+  margin: 2em 2em;
+}
+
+.tty-ErrorPageErrorType {
+  font-size: 250%;
+  font-weight: bold;
+  margin: 10px 10px;
+}
+
+.tty-ErrorPageErrorText {
+  margin-top: 1em;
+}

@@ -1,0 +1,20 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Project Data { Bugs, TestCases, Checkins, etc. } -->
+  <gwt:VerticalPanel ui:styleName="tty-Page tty-ProjectDataPage">
+    <ttywidgets:PageSectionVerticalPanel ui:field="pageSection">
+
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel ui:field="introText" />
+        <gwt:Anchor ui:styleName="tty-InlineAnchor" target="_blank" href="http://code.google.com/p/test-analytics/wiki/InAppDocumentation#Project_Bugs,_Checkins,_and_Testcases">Learn more</gwt:Anchor>
+      </gwt:FlowPanel>
+
+      <gwt:Label ui:field="dataSummary" />
+      <gwt:Grid ui:field="dataGrid" ui:styleName="tty-DataGrid" />
+
+    </ttywidgets:PageSectionVerticalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

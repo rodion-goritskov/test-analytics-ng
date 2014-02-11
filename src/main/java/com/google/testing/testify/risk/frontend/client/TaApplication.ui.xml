@@ -1,0 +1,68 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Test Analytics Application -->
+  <gwt:DockLayoutPanel ui:styleName="tty-App" unit='EM'>
+    
+    <!-- Header -->
+    <gwt:north size='3.4'>
+      <ttywidgets:PageHeaderWidget />
+    </gwt:north>
+
+    <!-- Toolbar -->
+    <gwt:north size='2.3'>
+      <gwt:HorizontalPanel ui:styleName="tty-Toolbar">
+          <gwt:HorizontalPanel ui:styleName="tty-ToolbarItem">
+            <gwt:ListBox ui:field="userProjectsListBox" ui:styleName="tty-ToolbarProjectsList" />
+            <ttywidgets:ProjectFavoriteStar ui:field="projectFavoriteStar" ui:styleName="tty-ToolbarProjectStar" />
+            <gwt:Label ui:field="projectNameLabel" ui:styleName="tty-ToolbarProjectName" />
+          </gwt:HorizontalPanel>
+       </gwt:HorizontalPanel>
+    </gwt:north>
+
+    <!-- Footer -->
+    <gwt:south size='3'>
+       <gwt:VerticalPanel ui:styleName="tty-Footer">
+         <gwt:Label ui:styleName="tty-FooterText">Source code licensed under the Apache License, Version 2.0</gwt:Label>
+       </gwt:VerticalPanel>
+    </gwt:south>
+
+    <!-- Left Navigation Bar -->
+    <!-- NOTE: The history tokens need to be in sync with the code responding to history-changed events. -->    
+    <gwt:west size='10'>
+      <gwt:AbsolutePanel ui:styleName="tty-LeftNav">
+        <ttywidgets:NavSectionPanel sectionTitle="Project Spec">
+          <ttywidgets:NavigationLink targetHistoryToken="project-details" ui:field="projectDetailsLink">About Project</ttywidgets:NavigationLink>
+          <ttywidgets:NavigationLink targetHistoryToken="attributes" ui:field="attributesLink">Attributes</ttywidgets:NavigationLink>
+          <ttywidgets:NavigationLink targetHistoryToken="components" ui:field="componentsLink">Components</ttywidgets:NavigationLink>
+          <ttywidgets:NavigationLink targetHistoryToken="capabilities" ui:field="capabilitiesLink">Capabilities</ttywidgets:NavigationLink>
+        </ttywidgets:NavSectionPanel>
+
+        <ttywidgets:NavSectionPanel sectionTitle="Risk">
+          <ttywidgets:NavigationLink targetHistoryToken="known-risk" ui:field="knownRisksLink">Overview</ttywidgets:NavigationLink>
+        </ttywidgets:NavSectionPanel>
+
+        <ttywidgets:NavSectionPanel sectionTitle="Imported Data">
+          <ttywidgets:NavigationLink targetHistoryToken="testcases" ui:field="projectTestcasesLink">Tests</ttywidgets:NavigationLink>
+          <ttywidgets:NavigationLink targetHistoryToken="bugs" ui:field="projectBugsLink">Bugs</ttywidgets:NavigationLink>
+          <ttywidgets:NavigationLink targetHistoryToken="checkins" ui:field="projectCheckinsLink">Checkins</ttywidgets:NavigationLink>
+        </ttywidgets:NavSectionPanel>
+
+        <ttywidgets:NavSectionPanel sectionTitle="Data Settings">
+          <ttywidgets:NavigationLink targetHistoryToken="configure-data" ui:field="configureDataLink">Data Sources</ttywidgets:NavigationLink>
+          <ttywidgets:NavigationLink targetHistoryToken="filters" ui:field="configureFiltersLink">Data Filters</ttywidgets:NavigationLink>
+        </ttywidgets:NavSectionPanel>
+      </gwt:AbsolutePanel>
+    </gwt:west>
+
+    <!-- Center Page Content -->
+    <gwt:center>
+      <gwt:ScrollPanel>
+        <gwt:SimplePanel ui:field="contentPanel" ui:styleName="tty-CenterContent" />
+      </gwt:ScrollPanel>
+    </gwt:center>
+
+  </gwt:DockLayoutPanel>
+</ui:UiBinder>

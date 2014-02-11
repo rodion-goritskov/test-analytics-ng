@@ -1,0 +1,46 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Filter -->
+  <gwt:VerticalPanel>
+    <gwt:HTMLPanel>
+      <hr class="tty-ItemDivider" />
+    </gwt:HTMLPanel>
+    <gwt:HorizontalPanel ui:styleName="tty-ItemContainer">
+      <gwt:VerticalPanel ui:styleName="tty-ItemContent">
+        <gwt:Label ui:field="filterName" ui:styleName="tty-ItemName" />
+        <gwt:HorizontalPanel verticalAlignment="middle" addStyleNames="tty-FilterParameterAnyAll">
+          <gwt:Label>If an incoming item matches</gwt:Label>
+          <gwt:ListBox ui:field="anyOrAllBox" />
+          <gwt:Label>of these criteria:</gwt:Label>
+        </gwt:HorizontalPanel>
+        <gwt:VerticalPanel ui:field="filterOptions" addStyleNames="tty-ItemContent" />
+        <gwt:Anchor ui:field="addOptionLink">Add criterion</gwt:Anchor>
+        <gwt:Label>Then set the following assignments:</gwt:Label>
+        <gwt:VerticalPanel addStyleNames="tty-ItemContent">
+          <gwt:HorizontalPanel verticalAlignment="middle" addStyleNames="tty-FilterParameter">
+            <gwt:Label>Attribute</gwt:Label>
+            <gwt:ListBox ui:field="attributeBox" />
+          </gwt:HorizontalPanel>
+          <gwt:HorizontalPanel verticalAlignment="middle" addStyleNames="tty-FilterParameter">
+            <gwt:Label>Component</gwt:Label>
+            <gwt:ListBox ui:field="componentBox" />
+          </gwt:HorizontalPanel>
+          <gwt:HorizontalPanel verticalAlignment="middle" addStyleNames="tty-FilterParameter">
+            <gwt:Label>Capability</gwt:Label>
+            <gwt:ListBox ui:field="capabilityBox" />
+          </gwt:HorizontalPanel>
+        </gwt:VerticalPanel>
+        <gwt:HorizontalPanel>
+          <gwt:Button ui:field="updateFilter">Save</gwt:Button>
+          <gwt:Button ui:field="cancelUpdateFilter">Cancel</gwt:Button>
+        </gwt:HorizontalPanel>
+      </gwt:VerticalPanel>
+      <gwt:Cell width="20">
+        <gwt:Image ui:field="deleteFilterImage" ui:styleName="tty-ItemDeleteImage" ui:url="images/x.png" ui:title="Delete" ui:altText="Delete"></gwt:Image>
+      </gwt:Cell>
+    </gwt:HorizontalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

@@ -1,0 +1,32 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Attribute -->
+  <gwt:VerticalPanel>
+    <gwt:HTMLPanel>
+      <hr class="tty-ItemDivider" />
+    </gwt:HTMLPanel>
+    <gwt:HorizontalPanel ui:styleName="tty-ItemContainer">
+      <gwt:Cell width="16" height="100%">
+        <gwt:Label ui:styleName="tty-ItemGripper" ui:field="attributeGripper" visible="false" />
+      </gwt:Cell>
+      <gwt:VerticalPanel ui:styleName="tty-ItemContent">
+        <gwt:HorizontalPanel ui:styleName="tty-ItemNameContainer">
+          <ttywidgets:EditableLabel ui:field="attributeName" ui:styleName="tty-ItemName" readOnly="true" />
+          <gwt:Label ui:field="attributeId" visible="false" />
+        </gwt:HorizontalPanel>
+  
+        <gwt:TextArea ui:field="description" enabled="false" />
+  
+        <gwt:FlowPanel ui:field="labelsPanel" />
+        
+        <gwt:CheckBox ui:field="signoffBox" addStyleNames="tty-ItemSignoffCheckbox" enabled="false">The tests performed for this attribute are sufficient to verify its operation.</gwt:CheckBox>  
+      </gwt:VerticalPanel>
+      <gwt:Cell width="20">
+        <gwt:Image ui:field="deleteAttributeImage" ui:styleName="tty-ItemDeleteImage" visible="false" ui:url="images/x.png" />
+      </gwt:Cell>
+    </gwt:HorizontalPanel>
+  </gwt:VerticalPanel>
+</ui:UiBinder>

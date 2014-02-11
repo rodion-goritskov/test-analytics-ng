@@ -1,0 +1,19 @@
+<module>
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.google.gwt.user.theme.standard.Standard" />
+  <inherits name="com.google.common.collect.Collect" />
+  <inherits name="com.google.testing.testify.risk.frontend.Sharedcode" />
+  <inherits name="com.google.common.base.Base" /> 
+  <inherits name="com.allen_sauer.gwt.dnd.gwt-dnd" />
+  <entry-point class="com.google.testing.testify.risk.frontend.client.TaEntryPoint" />
+ <source path="client"/>
+ <source path="client/event"/>
+ <source path="client/presenter"/>
+ <source path="client/riskprovider"/>
+ <source path="client/riskprovider/impl"/>
+ <source path="client/util"/>
+ <source path="client/view"/>
+ <source path="client/view/impl"/>
+ <source path="client/view/widgets"/>
+
+</module>

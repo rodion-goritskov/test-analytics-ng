@@ -1,0 +1,72 @@
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:gwt='urn:import:com.google.gwt.user.client.ui'
+    xmlns:ttywidgets='urn:import:com.google.testing.testify.risk.frontend.client.view.widgets'>
+
+  <!-- Project Settings -->
+  <gwt:VerticalPanel ui:styleName="tty-Page tty-ProjectDetailsPage">
+
+    <!-- Basic Settings -->
+    <ttywidgets:PageSectionVerticalPanel headerText="Basics">
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel>These details help identify your project.</gwt:InlineLabel>
+        <gwt:Anchor ui:styleName="tty-InlineAnchor" target="_blank" href="http://code.google.com/p/test-analytics/wiki/InAppDocumentation#Project_Details">Learn more</gwt:Anchor>
+      </gwt:FlowPanel>
+
+      <gwt:Label>Name</gwt:Label>
+      <gwt:SimplePanel addStyleNames="tty-DetailsInputItem">
+        <gwt:TextBox ui:field="projectName" enabled="false" />
+      </gwt:SimplePanel>
+  
+      <gwt:Label>Project Description</gwt:Label>
+      <gwt:SimplePanel addStyleNames="tty-DetailsInputItem">
+        <gwt:TextArea ui:field="projectDescription" enabled="false" addStyleNames="tty-DetailsInputItem" />
+      </gwt:SimplePanel>
+    </ttywidgets:PageSectionVerticalPanel>
+  
+    <!-- Sharing -->
+    <ttywidgets:PageSectionVerticalPanel headerText="Sharing">
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel>Setting a project's accessibility will determine who has access to view and update your Project. Owners have access to delete a project or mark it public; editors can update anything else.</gwt:InlineLabel>
+        <gwt:Anchor ui:styleName="tty-InlineAnchor" target="_blank" href="http://code.google.com/p/test-analytics/wiki/InAppDocumentation#Project_Details">Learn more</gwt:Anchor>
+      </gwt:FlowPanel>
+      <gwt:Label>Project owners (comma-separated list of email addresses)</gwt:Label>
+      <gwt:SimplePanel addStyleNames="tty-DetailsInputItem">
+        <gwt:TextBox ui:field="projectOwnersTextBox" enabled="false" addStyleNames="tty-DetailsInputItem" />
+      </gwt:SimplePanel>
+      <gwt:Label>Project editors (comma-separated list of email addresses)</gwt:Label>
+      <gwt:SimplePanel addStyleNames="tty-DetailsInputItem">
+        <gwt:TextArea ui:field="projectEditorsTextArea" enabled="false" addStyleNames="tty-DetailsInputItem" />
+      </gwt:SimplePanel>
+      <gwt:Label>Project viewers (comma-separated list of email addresses)</gwt:Label>
+      <gwt:SimplePanel addStyleNames="tty-DetailsInputItem">
+        <gwt:TextArea ui:field="projectViewersTextArea" enabled="false" addStyleNames="tty-DetailsInputItem" />
+      </gwt:SimplePanel>
+      <gwt:VerticalPanel ui:field="publicPanel" visible="false">
+        <gwt:Label>Public access</gwt:Label>
+        <gwt:SimplePanel addStyleNames="tty-DetailsInputItem">
+          <gwt:CheckBox ui:field="projectIsPublicCheckBox" addStyleNames="tty-DetailsCheckbox">Make project Public. If public, anyone on the Internet can see a public project, its full ACC model, and any uploaded information such as Bugs or Checkins.</gwt:CheckBox>
+        </gwt:SimplePanel>
+      </gwt:VerticalPanel>
+    </ttywidgets:PageSectionVerticalPanel>
+
+    <!-- Delete Application -->
+    <ttywidgets:PageSectionVerticalPanel headerText="Delete project" ui:field="deleteApplicationSection" visible="false">
+      <gwt:FlowPanel ui:styleName="tty-PageIntroText">
+        <gwt:InlineLabel>Delete this application. Only project owners have this ability. This operation cannot be undone!</gwt:InlineLabel>
+      </gwt:FlowPanel>
+
+      <gwt:CheckBox ui:field="deleteProjectCheckBox" addStyleNames="tty-DetailsCheckbox">Delete the project</gwt:CheckBox>
+    </ttywidgets:PageSectionVerticalPanel>
+
+    <!-- Save the project -->
+    <gwt:HorizontalPanel addStyleNames="tty-PageSectionVerticalPanel">
+      <gwt:Button ui:field="updateProjectInfoButton" enabled="false">Save</gwt:Button>
+      <gwt:HorizontalPanel ui:field="savedPanel" visible="false">
+        <gwt:Image ui:url="/images/bugstate-closed.png" />
+        <gwt:Label>Project updated</gwt:Label>
+      </gwt:HorizontalPanel>
+    </gwt:HorizontalPanel>
+
+  </gwt:VerticalPanel>
+</ui:UiBinder>
