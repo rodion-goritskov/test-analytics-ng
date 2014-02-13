@@ -95,13 +95,13 @@
   </dependencies>
 
 
-  <!-- Change appengine Maven plugin version to 1.8.3-maven3.0 if Maven < 3.1 is used --> 
+  <!-- Change appengine Maven plugin version to 1.8.4-maven3.0 if Maven < 3.1 is used --> 
   <build>
     <plugins>
       <plugin>
         <groupId>com.google.appengine</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
-        <version>1.8.3</version>
+        <version>1.8.4</version>
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
