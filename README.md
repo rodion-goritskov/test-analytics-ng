@@ -17,7 +17,7 @@ You need Maven (http://maven.apache.org/) to build the test-analytics-ng project
 4. Run 
 >mvn package
 
-How to run development server to see how it works?
+How to run development server?
 -----------------
 
 You can take a brief tour through test-analytics-ng by making steps 1 and 2 of the previous section and then running:
