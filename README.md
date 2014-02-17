@@ -5,7 +5,7 @@ Fork of the Google Test Analytics project
 
 How to build?
 ----------------
-You need Maven (http://maven.apache.org/) to build the test-analytics-ng project
+You need Maven (http://maven.apache.org/) to build the test-analytics-ng project.
 
 1. Clone this repo
 
@@ -17,10 +17,16 @@ You need Maven (http://maven.apache.org/) to build the test-analytics-ng project
 4. Run 
 >mvn package
 
-Run dev-server
+How to run development server to see how it works?
 -----------------
 
-You take a brief tour through test-analytics-ng by making steps 1 and 2 of the previous section and then running
+You can take a brief tour through test-analytics-ng by making steps 1 and 2 of the previous section and then running:
 
 >mvn appengine:devserver
 
+Deploying test-analytics-ng in AppScale
+-------
+
+AppScale (http://www.appscale.com/) is an open-source GAE (Google App Engine) implementation. You can deploy and use test-analytics-ng in it.
+
+How-to coming soon. 
