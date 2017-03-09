@@ -5,6 +5,7 @@
   <inherits name="com.google.testing.testify.risk.frontend.Sharedcode" />
   <inherits name="com.google.common.base.Base" /> 
   <inherits name="com.allen_sauer.gwt.dnd.gwt-dnd" />
+    <inherits name="com.google.gwt.logging.Logging"/>
   <entry-point class="com.google.testing.testify.risk.frontend.client.TaEntryPoint" />
  <source path="client"/>
  <source path="client/event"/>

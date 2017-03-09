@@ -25,13 +25,7 @@
           <gwt:Label ui:styleName="tty-UserBarDivider">|</gwt:Label>
         </gwt:Cell>
         <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
-          <gwt:Anchor ui:styleName="tty-UserBarItem" href="https://groups.google.com/group/test-analytics-discuss" target="_blank">Discussion Group</gwt:Anchor>
-        </gwt:Cell>
-        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
-          <gwt:Label ui:styleName="tty-UserBarDivider">|</gwt:Label>
-        </gwt:Cell>
-        <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
-          <gwt:Anchor ui:styleName="tty-UserBarItem" href="http://code.google.com/p/test-analytics" target="_blank">Open Source Page</gwt:Anchor>
+          <gwt:Anchor ui:styleName="tty-UserBarItem" href="https://github.com/rodion-goritskov/test-analytics-ng" target="_blank">GitHub Page</gwt:Anchor>
         </gwt:Cell>
         <gwt:Cell verticalAlignment='ALIGN_BOTTOM'>
           <gwt:Label ui:styleName="tty-UserBarDivider">|</gwt:Label>

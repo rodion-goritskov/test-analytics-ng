@@ -155,7 +155,7 @@ public class Capability implements Serializable, HasLabels {
   /**
    * @return the stable intersection key. {@See getCapabilityIntersectionKey}
    */
-  public int getCapabilityIntersectionKey() {
+  public long getCapabilityIntersectionKey() {
     return Capability.getCapabilityIntersectionKey(componentId, attributeId);
   }
 
@@ -168,7 +168,7 @@ public class Capability implements Serializable, HasLabels {
    * @return a stable integer corresponding to the unique component / attribute pairing sutable
    * for placing Capability lists into a map.
    */
-  public static int getCapabilityIntersectionKey(Component component, Attribute attribute) {
+  public static long getCapabilityIntersectionKey(Component component, Attribute attribute) {
     return Capability.getCapabilityIntersectionKey(
                component.getComponentId(), attribute.getAttributeId());
   }
@@ -176,8 +176,8 @@ public class Capability implements Serializable, HasLabels {
   /**
    * Computes a capability intersection key given the raw component and attribute IDs.
    */
-  private static int getCapabilityIntersectionKey(long componentId, long attributeId) {
-    return Integer.valueOf((int) ((componentId << 16) ^ attributeId));
+  private static long getCapabilityIntersectionKey(long componentId, long attributeId) {
+    return ((componentId << 10) ^ attributeId);
   }
 
   public long getDisplayOrder() {

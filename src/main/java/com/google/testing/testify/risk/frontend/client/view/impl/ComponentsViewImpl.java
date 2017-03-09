@@ -199,8 +199,10 @@ public class ComponentsViewImpl extends Composite implements ComponentsView {
     this.projectLabels.clear();
     this.projectLabels.addAll(projectLabels);
     for (Widget w : componentsPanel) {
-      AttributeViewImpl view = (AttributeViewImpl) w;
-      view.setLabelSuggestions(this.projectLabels);
+      if (w instanceof AttributesViewImpl) {
+        AttributeViewImpl view = (AttributeViewImpl) w;
+        view.setLabelSuggestions(this.projectLabels);
+      }
     }
   }
 

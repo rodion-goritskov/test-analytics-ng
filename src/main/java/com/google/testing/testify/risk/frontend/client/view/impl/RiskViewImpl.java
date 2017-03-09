@@ -97,12 +97,12 @@ public abstract class RiskViewImpl extends Composite
   /**
    * Map of intersection key to data stored inside a CapabilityIntersectionData object.
    */
-  private final Map<Integer, CapabilityIntersectionData> dataMap = Maps.newHashMap();
+  private final Map<Long, CapabilityIntersectionData> dataMap = Maps.newHashMap();
 
   /**
    * Map of intersection key to capability list.
    */
-  private final Multimap<Integer, Capability> capabilityMap = HashMultimap.create();
+  private final Multimap<Long, Capability> capabilityMap = HashMultimap.create();
   private final HashSet<RequiredDataType> initializedDataTypes = Sets.newHashSet();
   private final ArrayList<Component> components = Lists.newArrayList();
   private final ArrayList<Attribute> attributes = Lists.newArrayList();
@@ -279,7 +279,7 @@ public abstract class RiskViewImpl extends Composite
 
     Attribute attribute = attributes.get(aIndex);
     Component component = components.get(cIndex);
-    Integer key = Capability.getCapabilityIntersectionKey(component, attribute);
+    Long key = Capability.getCapabilityIntersectionKey(component, attribute);
     return dataMap.get(key);
   }
 
@@ -294,7 +294,7 @@ public abstract class RiskViewImpl extends Composite
 
     for (Attribute attribute : attributes) {
       for (Component component : components) {
-        Integer key = Capability.getCapabilityIntersectionKey(component, attribute);
+        Long key = Capability.getCapabilityIntersectionKey(component, attribute);
 
         CapabilityIntersectionData data = new CapabilityIntersectionData(
             attribute, component, capabilityMap.get(key));
@@ -333,7 +333,7 @@ public abstract class RiskViewImpl extends Composite
         int column = aIndex + 1;
         Attribute attribute = attributes.get(aIndex);
         Component component = components.get(cIndex);
-        Integer key = Capability.getCapabilityIntersectionKey(component, attribute);
+        Long key = Capability.getCapabilityIntersectionKey(component, attribute);
         CapabilityIntersectionData data = dataMap.get(key);
 
         double risk = 0.0;

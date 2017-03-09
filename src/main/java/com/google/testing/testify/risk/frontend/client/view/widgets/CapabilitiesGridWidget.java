@@ -55,9 +55,9 @@ public class CapabilitiesGridWidget extends Composite
   private final List<Component> components = Lists.newArrayList();
 
   // Map from intersection key to capability list.
-  private final Multimap<Integer, Capability> capabilityMap = HashMultimap.create();
+  private final Multimap<Long, Capability> capabilityMap = HashMultimap.create();
   // Map from intersection key to table cell.
-  private final Map<Integer, HTML> cellMap = Maps.newHashMap();
+  private final Map<Long, HTML> cellMap = Maps.newHashMap();
 
   private final Grid grid = new Grid();
 
@@ -77,7 +77,7 @@ public class CapabilitiesGridWidget extends Composite
    * @param capability capability to add.
    */
   public void addCapability(Capability capability) {
-    Integer key = capability.getCapabilityIntersectionKey();
+    Long key = capability.getCapabilityIntersectionKey();
 
     // Add the capability.
     addCapabilityWithoutUpdate(capability);
@@ -87,7 +87,7 @@ public class CapabilitiesGridWidget extends Composite
   }
 
   public void deleteCapability(Capability capability) {
-    for (Integer key : capabilityMap.keySet()) {
+    for (Long key : capabilityMap.keySet()) {
       Collection<Capability> c = capabilityMap.get(key);
       if (c.contains(capability)) {
         c.remove(capability);
@@ -123,7 +123,7 @@ public class CapabilitiesGridWidget extends Composite
   }
 
   private void addCapabilityWithoutUpdate(Capability capability) {
-    Integer key = capability.getCapabilityIntersectionKey();
+    Long key = capability.getCapabilityIntersectionKey();
     capabilityMap.put(key, capability);
   }
 
@@ -164,7 +164,7 @@ public class CapabilitiesGridWidget extends Composite
 
         Component component = components.get(cIndex);
         Attribute attribute = attributes.get(aIndex);
-        Integer key = Capability.getCapabilityIntersectionKey(component, attribute);
+        Long key = Capability.getCapabilityIntersectionKey(component, attribute);
 
         grid.getCellFormatter().setStyleName(row, column, "tty-GridCell");
         if (row == highlightedCellRow && column == highlightedCellColumn) {
@@ -271,12 +271,12 @@ public class CapabilitiesGridWidget extends Composite
    * This updates the contents of the grid based off the current capability data.
    */
   private void updateGridCells() {
-    for (Integer key : cellMap.keySet()) {
+    for (Long key : cellMap.keySet()) {
       updateGridCell(key);
     }
   }
 
-  private void updateGridCell(Integer key) {
+  private void updateGridCell(Long key) {
     int size = capabilityMap.get(key).size();
 
     String text = "&nbsp;";

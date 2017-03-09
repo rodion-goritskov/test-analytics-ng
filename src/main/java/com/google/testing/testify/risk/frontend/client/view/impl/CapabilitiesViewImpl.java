@@ -205,8 +205,10 @@ public class CapabilitiesViewImpl extends Composite implements CapabilitiesView 
     projectLabels.clear();
     projectLabels.addAll(labels);
     for (Widget w : capabilitiesContainer) {
-      EditCapabilityWidget capabilityWidget = (EditCapabilityWidget) w;
-      capabilityWidget.setLabelSuggestions(projectLabels);
+      if (w instanceof EditCapabilityWidget) {
+        EditCapabilityWidget capabilityWidget = (EditCapabilityWidget) w;
+        capabilityWidget.setLabelSuggestions(projectLabels);
+      }
     }
   }
 
