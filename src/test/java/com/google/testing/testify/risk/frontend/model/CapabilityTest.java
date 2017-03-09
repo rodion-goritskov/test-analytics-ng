@@ -215,20 +215,20 @@ public class CapabilityTest extends TestCase {
 
     Capability capabilityAA = new Capability(
         3L, attrA.getAttributeId(), compA.getComponentId());
-    int keyAA = capabilityAA.getCapabilityIntersectionKey();
+    long keyAA = capabilityAA.getCapabilityIntersectionKey();
 
     Capability capabilityAB = new Capability(
         3L, attrA.getAttributeId(), compB.getComponentId());
-    int keyAB = capabilityAB.getCapabilityIntersectionKey();
+    long keyAB = capabilityAB.getCapabilityIntersectionKey();
 
     Capability capabilityBA = new Capability(
         3L, attrB.getAttributeId(), compA.getComponentId());
-    int keyBA = capabilityBA.getCapabilityIntersectionKey();
+    long keyBA = capabilityBA.getCapabilityIntersectionKey();
 
     Capability capabilityAA2 = new Capability(
         3L, attrA.getAttributeId(), compA.getComponentId());
-    int keyAA2 = capabilityAA2.getCapabilityIntersectionKey();
-    int keyAA3 = Capability.getCapabilityIntersectionKey(compA, attrA);
+    long keyAA2 = capabilityAA2.getCapabilityIntersectionKey();
+    long keyAA3 = Capability.getCapabilityIntersectionKey(compA, attrA);
 
     assertTrue(keyAA != keyBA);
     assertTrue(keyAA != keyAB);

@@ -21,7 +21,7 @@
     <dependency>
       <groupId>com.allen-sauer.gwt.dnd</groupId>
       <artifactId>gwt-dnd</artifactId>
-      <version>3.1.2</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.inject</groupId>
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>10.0-rc1</version>
+      <version>19.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava-gwt</artifactId>
-      <version>10.0-rc1</version>
+      <version>19.0</version>
     </dependency>
     <dependency>
       <groupId>javax.jdo</groupId>
@@ -102,6 +102,12 @@
         <groupId>com.google.appengine</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
         <version>1.8.4</version>
+        <configuration>
+          <jvmFlags>
+            <jvmFlag>-Xdebug</jvmFlag>
+            <jvmFlag>-agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n</jvmFlag>
+          </jvmFlags>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -180,14 +186,14 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
-        <version>2.3.0-1</version>
+        <version>2.7.0</version>
         <configuration>
           <logLevel>INFO</logLevel>
           <port>${gae.port}</port>
 
           <compileTargets>
             <value>com.google.testing.testify.risk.frontend.Sharedcode</value>
-            <value>com.google.testing.testify.risk.frontend.client.clientmodule</value>
+            <value>com.google.testing.testify.risk.frontend.clientmodule</value>
           </compileTargets>
 
           <extraJvmArgs>-Xmx512m</extraJvmArgs>
@@ -210,12 +216,12 @@
           <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava-gwt</artifactId>
-            <version>10.0-rc1</version>
+            <version>19.0</version>
           </dependency>
           <dependency>
-            <groupId>com.google.code.gwt-dnd</groupId>
+            <groupId>com.allen-sauer.gwt.dnd</groupId>
             <artifactId>gwt-dnd</artifactId>
-            <version>3.1.1</version>
+            <version>3.3.3</version>
           </dependency>
           <dependency>
             <groupId>com.google.appengine</groupId>
@@ -266,7 +272,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <gwt.version>2.3.0</gwt.version>
+    <gwt.version>2.7.0</gwt.version>
     <gae.version>1.5.4</gae.version>
     <gae.application.version>test</gae.application.version>
     <gae.port>8080</gae.port>
